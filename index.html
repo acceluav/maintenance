@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under Maintenance</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #34495e;
+        margin-bottom: 2rem;
+      }
+      .gear {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto 2rem;
+        animation: spin 4s linear infinite;
+      }
+      .gear::before,
+      .gear::after {
+        content: "";
+        position: absolute;
+        background-color: #f0f4f8;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .gear::before {
+        border-radius: 50%;
+      }
+      .gear::after {
+        width: 60px;
+        height: 10px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gear"></div>
+      <h1>Under Maintenance</h1>
+      <p>We're working hard to improve our website. We'll be back soon!</p>
+    </div>
+  </body>
+</html>
